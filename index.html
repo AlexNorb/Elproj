@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- SEO Meta Tags -->
+    <title>ELPROJEKT - Elektriker i Tjörn, Stenungsund & Uddevalla</title>
+    <meta name="description" content="Din lokala elektriker på Tjörn, Stenungsund, Uddevalla och Kungälv. Vi utför nybyggnation, renovering, installation av laddbox (Zaptec/Easee) och byte av elcentral.">
+    <meta name="keywords" content="elektriker, elinstallation, laddbox, solceller, smarta hem, Tjörn, Stenungsund, Uddevalla, Kungälv, Zaptec, Easee, golvvärme, elcentral">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://elprojekt.se/">
+    <meta property="og:title" content="ELPROJEKT - Modern Elteknik & Installation">
+    <meta property="og:description" content="Vi hjälper dig med allt från badrumsrenovering till installation av solceller och laddboxar. Verksamma i Bohuslän.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Orbitron:wght@400;500;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              elblue: {
+                50: '#e6f0ff',
+                100: '#b3d1ff',
+                400: '#3363b8',
+                DEFAULT: '#003ca6', // Primary
+                600: '#002a74',
+                900: '#00153a',
+              },
+              elorange: {
+                DEFAULT: '#ff7403', // Accent
+                hover: '#e66800',
+              },
+              slate: {
+                850: '#151f32', // Custom dark for tech feel
+              }
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              display: ['Orbitron', 'sans-serif'],
+            },
+            backgroundImage: {
+              'tech-grid': "radial-gradient(#e5e7eb 1px, transparent 1px)",
+              'tech-grid-dark': "radial-gradient(rgba(255,255,255,0.1) 1px, transparent 1px)",
+            },
+            backgroundSize: {
+              'tech-grid': '20px 20px',
+            },
+            animation: {
+              'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+              'float': 'float 6s ease-in-out infinite',
+              'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            },
+            keyframes: {
+              fadeInUp: {
+                '0%': { opacity: '0', transform: 'translateY(20px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-20px)' },
+              }
+            }
+          },
+        },
+      }
+    </script>
+    
+    <!-- Structured Data (JSON-LD) for Local Business SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Electrician",
+      "name": "ELPROJEKT",
+      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475",
+      "description": "ELPROJEKT utför elinstallationer, nybyggnation och renovering i Tjörn, Stenungsund, Uddevalla och Kungälv.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Stenungsund",
+        "addressRegion": "Västra Götaland",
+        "addressCountry": "SE"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "58.0705",
+        "longitude": "11.8170"
+      },
+      "url": "https://elprojekt.se",
+      "telephone": "08-1234567",
+      "priceRange": "$$",
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Tjörn"
+        },
+        {
+          "@type": "City",
+          "name": "Stenungsund"
+        },
+        {
+          "@type": "City",
+          "name": "Uddevalla"
+        },
+        {
+          "@type": "City",
+          "name": "Kungälv"
+        }
+      ],
+      "makesOffer": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Laddbox Installation (Easee, Zaptec)"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Byte av Elcentral"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Badrumsrenovering & Golvvärme"
+          }
+        }
+      ]
+    }
+    </script>
+
+    <style>
+      /* Smooth scroll behavior */
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 80px; /* Matches the height of the fixed navbar to prevent occlusion */
+      }
+      body {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      .glass-nav {
+        background: rgba(255, 255, 255, 0.9);
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid rgba(0, 60, 166, 0.1);
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/"
+  }
+}
+</script>
+</head>
+  <body class="bg-slate-50 text-slate-900">
+    <div id="root"></div>
+  </body>
+</html>
